@@ -34,7 +34,7 @@ emaint -r nelumbonaceae sync
    > ```bash
    > mkdir -pv /etc/portage/patches/x11-libs/libXft
    > 
-   > curl "https://gitlab.freedesktop.org/xorg/lib/libxft/-/commit/7808631e7a9a605d5fe7a1077129c658d9ec47fc" \
+   > curl -s "https://gitlab.freedesktop.org/xorg/lib/libxft/-/commit/7808631e7a9a605d5fe7a1077129c658d9ec47fc.diff" \
    > -o /etc/portage/patches/x11-libs/libXft/bgra.patch
    >
    > emerge -av -1 x11-libs/libXft
