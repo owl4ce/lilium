@@ -4,7 +4,7 @@
 
 This done without neither `layman` nor `eselect-repository` tool. Create a new configuration or add this to the main configuration (gentoo.conf).
 
-<a href=""><img alt="logo" align="right" width="400px" src="https://repository-images.githubusercontent.com/384169861/e8405080-e0ba-11eb-9ff2-744e4ee2e2e2"/></a>
+<a href=""><img alt="logo" align="right" width="333px" src="https://repository-images.githubusercontent.com/384169861/e8405080-e0ba-11eb-9ff2-744e4ee2e2e2"/></a>
 ```sh
 cat >> /etc/portage/repos.conf/overlay.conf << "EOF"
 
