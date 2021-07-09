@@ -23,7 +23,7 @@ emaint -r nelumbonaceae sync
 > This done without neither `layman` nor `eselect-repository` tool. 
 
 ## Ebuild lists
-<img alt="" align="right" width="50px"  src="https://i.ibb.co/X8QNrkW/2021-07-09-154736-546x286-scrot.png"/> 
+<img alt="" align="right" width="150px"  src="https://i.ibb.co/X8QNrkW/2021-07-09-154736-546x286-scrot.png"/> 
 
 * [`x11-terms/rxvt-unicode`](./x11-terms/rxvt-unicode/)
 
