@@ -14,9 +14,9 @@ sync-type = git
 sync-uri = https://github.com/owl4ce/nelumbonaceae.git
 
 EOF
+```
 ```sh
 emaint -a sync
-```
 ```
 
 ## Ebuild lists
