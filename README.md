@@ -18,7 +18,7 @@ sync-uri = https://github.com/owl4ce/nelumbonaceae.git
 EOF
 ```
 ```sh
-emaint -a sync
+emaint -r nelumbonaceae sync
 ```
 > This done without neither `layman` nor `eselect-repository` tool. 
 
