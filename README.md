@@ -39,3 +39,5 @@ emaint -r nelumbonaceae sync
    >
    > emerge -av -1 x11-libs/libXft
    > ```
+
+* *more will come, if needed.*
