@@ -85,6 +85,6 @@ src_compile() {
 src_install() {
 	default
 
-	make_desktop_entry urxvt rxvt-unicode utilities-terminal \
+	make_desktop_entry urxvt URxvt utilities-terminal \
 		"System;TerminalEmulator"
 }
