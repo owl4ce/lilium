@@ -23,6 +23,8 @@ emaint -r nelumbonaceae sync
 > This done without neither `layman` nor `eselect-repository` tool. 
 
 ## Ebuild lists
+<img align="right" src="https://i.ibb.co/X8QNrkW/2021-07-09-154736-546x286-scrot.png" alt=""/> 
+
 * [`x11-terms/rxvt-unicode`](./x11-terms/rxvt-unicode/)
 
-   > No systemd services, add wide glyphs and true color emoji support, etc. Thanks [AUR](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/).
+   > No systemd services, add wide glyphs and true color emoji support (libXft-bgra), etc. Thanks [AUR](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/).
