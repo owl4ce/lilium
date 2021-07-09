@@ -1,8 +1,10 @@
 # <p align="center">`nelumbonaceae`</p>
 
+<p align="center"><i>~ personal portage overlay ~</i></p>
+
 ## Adding this overlay <img alt="" align="right" src="https://badges.pufler.dev/visits/owl4ce/nelumbonaceae?style=flat-square&label=&color=000000&logo=GitHub&logoColor=white&labelColor=373e4d"/>
 
-This done without neither `layman` nor `eselect-repository` tool. Create a new configuration or add this to the main configuration (gentoo.conf).
+Create a new configuration or add this to the main configuration (gentoo.conf).
 
 <a href=""><img alt="logo" align="right" width="250px" src="https://repository-images.githubusercontent.com/384169861/e8405080-e0ba-11eb-9ff2-744e4ee2e2e2"/></a>
 ```sh
@@ -18,6 +20,7 @@ EOF
 ```sh
 emaint -a sync
 ```
+> This done without neither `layman` nor `eselect-repository` tool. 
 
 ## Ebuild lists
 * [`x11-terms/rxvt-unicode`](./x11-terms/rxvt-unicode/)
