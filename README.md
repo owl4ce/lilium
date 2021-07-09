@@ -1,6 +1,6 @@
 # <p align="center">`nelumbonaceae`</p>
 
-## Adding this overlay
+### Adding this overlay
 > Without `layman` or `eselect-repository` tool.
 ```sh
 # Create a new configuration or add it to the main configuration (gentoo.conf).
@@ -15,7 +15,7 @@ sync-uri = https://github.com/owl4ce/nelumbonaceae.git
 EOF
 ```
 
-## Ebuild lists
+### Ebuild lists
 * [`x11-terms/rxvt-unicode`](./x11-terms/rxvt-unicode/)
 
    > No systemd services, add wide glyphs and true color emoji support, etc. Thanks [AUR](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/).
