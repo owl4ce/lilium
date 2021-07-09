@@ -1,6 +1,6 @@
 # <p align="center">`nelumbonaceae`</p>
 
-<p align="center"><i>~ i'm not really understand about portage's function, this overlay is just for ebuild repair or feature-upgrade ~</i></p>
+<p align="center"><i>~ I don't really understand about portage's function, this overlay is just for ebuild repair or feature-upgrade ~</i></p>
 
 ## Adding this overlay <img alt="" align="right" src="https://badges.pufler.dev/visits/owl4ce/nelumbonaceae?style=flat-square&label=&color=000000&logo=GitHub&logoColor=white&labelColor=373e4d"/>
 
