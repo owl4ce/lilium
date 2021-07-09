@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools desktop flag-o-matic systemd prefix
+inherit autotools desktop flag-o-matic prefix
 
 DESCRIPTION="rxvt clone with xft and unicode support"
 HOMEPAGE="http://software.schmorp.de/pkg/rxvt-unicode.html"
