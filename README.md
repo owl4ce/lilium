@@ -20,9 +20,9 @@ EOF
 ```sh
 emaint -r nelumbonaceae sync
 ```
-> This done without neither `layman` nor `eselect-repository` tool. 
+> This done without neither **layman** nor **eselect-repository** tool. 
 
-## Ebuild lists
+## Ebuilds list
 <img alt="" align="right" width="250px" src="https://i.imgur.com/FILhkun.png"/> 
 
 * [`x11-terms/rxvt-unicode`](./x11-terms/rxvt-unicode/)
