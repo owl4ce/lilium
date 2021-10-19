@@ -23,7 +23,6 @@ emaint -r nelumbonaceae sync
 > This done without neither **layman** nor **eselect-repository** tool. 
 
 ## Ebuilds list
-<img alt="" align="right" width="250px" src="https://i.imgur.com/FILhkun.png"/> 
 
 * [`x11-terms/rxvt-unicode`](./x11-terms/rxvt-unicode/)
 
@@ -40,5 +39,8 @@ emaint -r nelumbonaceae sync
    >
    > emerge -av -1 x11-libs/libXft
    > ```
+   >
+   > <p align="center"><img alt="" src="https://i.imgur.com/FILhkun.png"/></p>
+   >
 
 * *more will come, if needed.*
