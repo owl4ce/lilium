@@ -29,12 +29,11 @@ emaint -r nelumbonaceae sync
    > No systemd services, add wide glyphs and true color emoji support, etc. Thanks [AUR](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/).
    
    > **How to patch `libXft` with BGRA glyphs display scaling?**  
-   > > **Warning!** Currently only works on version **2.3.3**.  
    > Simply follow these commands as root.
    > ```bash
    > mkdir -pv /etc/portage/patches/x11-libs/libXft
    > 
-   > curl -s "https://gitlab.freedesktop.org/xorg/lib/libxft/-/commit/7808631e7a9a605d5fe7a1077129c658d9ec47fc.diff" \
+   > curl -s https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1.patch \
    > -o /etc/portage/patches/x11-libs/libXft/bgra.patch
    >
    > emerge -av -1 x11-libs/libXft
