@@ -12,10 +12,10 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/Attic/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris"
-IUSE="256-color blink fading-colors +font-styles gdk-pixbuf iso14755 +mousewheel
-	+perl startup-notification unicode3 +utmp +wide-glyphs +wtmp xft"
+IUSE="256-color blink fading-colors +font-styles gdk-pixbuf iso14755 +mousewheel +perl startup-notification unicode3 +utmp +wide-glyphs +wtmp xft"
 
-RDEPEND=">=sys-libs/ncurses-5.7-r6:=
+RDEPEND="
+	>=sys-libs/ncurses-5.7-r6:=
 	media-libs/fontconfig
 	x11-libs/libX11
 	x11-libs/libXrender
@@ -24,9 +24,12 @@ RDEPEND=">=sys-libs/ncurses-5.7-r6:=
 	kernel_Darwin? ( dev-perl/Mac-Pasteboard )
 	perl? ( dev-lang/perl:= )
 	startup-notification? ( x11-libs/startup-notification )
-	xft? ( x11-libs/libXft )"
-DEPEND="${RDEPEND}
-	x11-base/xorg-proto"
+	xft? ( x11-libs/libXft )
+"
+DEPEND="
+	${RDEPEND}
+	x11-base/xorg-proto
+"
 BDEPEND="virtual/pkgconfig"
 # WARNING: will bdepend on >=sys-devel/autoconf-2.71 (masked as of 2021-07-07) if eautoreconf has to be called
 
@@ -49,7 +52,7 @@ src_prepare() {
 	default
 
 	# kill the rxvt-unicode terminfo file - #192083
-	sed -i -e "/rxvt-unicode.terminfo/d" doc/Makefile.in || die "sed failed"
+	sed -e "/rxvt-unicode.terminfo/d" -i doc/Makefile.in || die "sed failed"
 
 	# use xsubpp from Prefix - #506500
 	hprefixify -q '"' -w "/xsubpp/" src/Makefile.in
@@ -77,9 +80,8 @@ src_configure() {
 src_compile() {
 	default
 
-	sed -i \
-		-e 's/RXVT_BASENAME = "rxvt"/RXVT_BASENAME = "urxvt"/' \
-		"${S}"/doc/rxvt-tabbed || die
+	sed -e 's/RXVT_BASENAME = "rxvt"/RXVT_BASENAME = "urxvt"/' \
+		-i "${S}"/doc/rxvt-tabbed || die
 }
 
 src_install() {
