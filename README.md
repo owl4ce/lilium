@@ -42,4 +42,6 @@ emaint -r nelumbonaceae sync
    > <p align="center"><img alt="" src="https://i.imgur.com/FILhkun.png"/></p>
    >
 
+* [`media-gfx/scrot`](./media-gfx/scrot/)
+
 * *more will come, if needed.*
