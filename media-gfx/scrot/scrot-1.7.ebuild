@@ -39,7 +39,9 @@ DOCS=(
 )
 
 src_prepare() {
-	sed -e 's|-g -O3||g' -i src/Makefile.am || die
+	# Fix multiple documentations from being installed.
+	sed -e '/EXTRA_DIST/s|$(docs_DATA)||g' \
+		-e '/docs_DATA/s|=.*|=|g' -i Makefile.am || die
 	cp "${FILESDIR}"/ax_prefix_config_h.m4 acinclude.m4 || die
 
 	default
