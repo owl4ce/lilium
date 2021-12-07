@@ -37,6 +37,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-9.06-case-insensitive-fs.patch
 	"${FILESDIR}"/${PN}-9.21-xsubpp.patch
 	"${FILESDIR}"/enable-wide-glyphs.patch
+	"${FILESDIR}"/fixed-font-resize.patch # https://git.io/JDvnZ
 	"${FILESDIR}"/improve-font-rendering.patch
 )
 DOCS=(
