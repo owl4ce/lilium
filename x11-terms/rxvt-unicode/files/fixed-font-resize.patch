@@ -1,5 +1,5 @@
---- src/main.C
-+++ src/main.C
+--- a/src/main.C
++++ b/src/main.C
 @@ -876,9 +876,8 @@
  #endif
      }
