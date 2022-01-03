@@ -6,7 +6,7 @@
 
 Create a new configuration or add this to the main configuration (gentoo.conf).
 
-<a href="#adding-this-overlay-"><img alt="logo" align="right" width="250px" src="https://repository-images.githubusercontent.com/384169861/e8405080-e0ba-11eb-9ff2-744e4ee2e2e2"/></a>
+<a href="#adding-this-overlay-"><img alt="logo" align="right" width="255px" src="https://repository-images.githubusercontent.com/384169861/e8405080-e0ba-11eb-9ff2-744e4ee2e2e2"/></a>
 ```sh
 cat >> /etc/portage/repos.conf/overlay.conf << "EOF"
 
@@ -28,8 +28,7 @@ emaint -r nelumbonaceae sync
 
    > No systemd services, add wide glyphs and true color emoji support, etc. Thanks [AUR](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/).
    
-   > **How to patch `libXft` with BGRA glyphs display scaling?**  
-   > Simply follow these commands as root.
+   > **How to patch `libXft` with BGRA glyphs display scaling?**
    > ```bash
    > mkdir -pv /etc/portage/patches/x11-libs/libXft
    > 
