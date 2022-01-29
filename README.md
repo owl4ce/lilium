@@ -4,12 +4,10 @@
 
 ## Adding this overlay <img alt="" align="right" src="https://badges.pufler.dev/visits/owl4ce/nelumbonaceae?style=flat-square&label=&color=000000&logo=GitHub&logoColor=white&labelColor=373e4d"/>
 
-Create a new configuration or add this to the main configuration (gentoo.conf).
+Create a new configuration or add this to the main configuration (gentoo.conf). Run below as root.
 
 <a href="#adding-this-overlay-"><img alt="logo" align="right" width="255px" src="https://repository-images.githubusercontent.com/384169861/e8405080-e0ba-11eb-9ff2-744e4ee2e2e2"/></a>
 ```sh
-# As root.
-
 cat >> /etc/portage/repos.conf/overlay.conf << "EOF"
 
 [nelumbonaceae]
@@ -32,8 +30,6 @@ emaint -r nelumbonaceae sync
    
    > **How to patch `libXft` with BGRA glyphs display scaling?**
    > ```sh
-   > # As root.
-   > 
    > install -dv /etc/portage/patches/x11-libs/libXft
    > 
    > curl -s https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1.patch \
