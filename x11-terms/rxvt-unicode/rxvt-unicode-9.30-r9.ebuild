@@ -1,43 +1,48 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit desktop prefix
+inherit autotools desktop prefix
 
-COLOUR_PATCH_NAME="${PN}-9.26_24-bit-color_aur-20210516+eautoreconf.patch"
+COLOUR_PATCH_NAME="${PN}-9.29_24-bit-color_aur-9.26-20210712.patch"
 
 DESCRIPTION="rxvt clone with xft and unicode support"
 HOMEPAGE="http://software.schmorp.de/pkg/rxvt-unicode.html"
 SRC_URI="http://dist.schmorp.de/rxvt-unicode/Attic/${P}.tar.bz2
-	https://dev.gentoo.org/~marecki/dists/${PN}/${COLOUR_PATCH_NAME}.xz"
+	https://dev.gentoo.org/~marecki/dists/${CATEGORY}/${PN}/${COLOUR_PATCH_NAME}.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris"
+KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ppc ppc64 ~riscv sparc x86"
 IUSE="24-bit-color 256-color blink fading-colors +font-styles gdk-pixbuf iso14755 +mousewheel
-	+perl startup-notification unicode3 +utmp +wide-glyphs +wtmp xft"
+	perl startup-notification unicode3 +wide-glyphs xft"
+
+# Bug #830329
+REQUIRED_USE="perl? ( fading-colors )"
 
 RDEPEND=">=sys-libs/ncurses-5.7-r6:=
+	dev-libs/libptytty
 	media-libs/fontconfig
 	x11-libs/libX11
 	x11-libs/libXrender
 	x11-libs/libXt
 	gdk-pixbuf? ( x11-libs/gdk-pixbuf )
-	kernel_Darwin? ( dev-perl/Mac-Pasteboard )
 	perl? ( dev-lang/perl:= )
 	startup-notification? ( x11-libs/startup-notification )
 	xft? ( x11-libs/libXft )"
 DEPEND="${RDEPEND}
 	x11-base/xorg-proto"
-BDEPEND="virtual/pkgconfig"
+# autoconf dependency hopefully temporary, see Bug #827852
+BDEPEND="virtual/pkgconfig
+	>=sys-devel/autoconf-2.71"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-9.06-case-insensitive-fs.patch
 	"${FILESDIR}"/${PN}-9.21-xsubpp.patch
-	"${FILESDIR}"/${PN}-9.26-enable-wide-glyphs.patch
-	"${FILESDIR}"/${PN}-9.26-improve-font-rendering.patch
-	"${FILESDIR}"/${PN}-9.26-fixed-layout-size.patch
+	"${FILESDIR}"/${PN}-9.30-enable-wide-glyphs.patch
+	"${FILESDIR}"/${PN}-9.30-improve-font-rendering.patch
+	"${FILESDIR}"/${PN}-9.30-fixed-layout-size.patch
 )
 DOCS=(
 	Changes
@@ -54,6 +59,7 @@ src_prepare() {
 	# Current patch is too aggressive to apply unconditionally, see Bug #801571
 	if use 24-bit-color; then
 		eapply "${WORKDIR}"/${COLOUR_PATCH_NAME}
+		eautoreconf
 	fi
 
 	# kill the rxvt-unicode terminfo file - #192083
@@ -77,9 +83,7 @@ src_configure() {
 		$(use_enable perl)
 		$(use_enable startup-notification)
 		$(use_enable unicode3)
-		$(use_enable utmp)
 		$(use_enable wide-glyphs)
-		$(use_enable wtmp)
 		$(use_enable xft)
 	)
 	if use 24-bit-color; then
@@ -112,4 +116,3 @@ pkg_postinst() {
 		ewarn
 	fi
 }
-
