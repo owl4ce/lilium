@@ -35,5 +35,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "It's time to turn on the 'set-cfs-tweaks' openrc-service."
+	elog "It's time to enable the 'set-cfs-tweaks' openrc-service."
+	elog "Recommended add to 'boot' runlevel. Then start the service."
 }
