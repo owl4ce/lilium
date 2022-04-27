@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<email>alternate-se7en@pm.me</email>
-		<name>owl4ce</name>
+		<name>Harry Kurn</name>
 	</maintainer>
 	<use>
 		<flag name="24-bit-color">Enable 24-bit color support. Note that this feature
