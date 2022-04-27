@@ -50,4 +50,6 @@ emaint -r nelumbonaceae sync
   > <img alt="" align="center" src="https://i.imgur.com/FILhkun.png"/>
   >
 
+* [`sys-apps/cfs-zen-tweaks`](./sys-apps/cfs-zen-tweaks)
+
 * *more will come, if needed.*
