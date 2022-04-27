@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>alternate-se7en@pm.me</email>
+		<name>Harry Kurn</name>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/igo95862/cfs-zen-tweaks/issues</bugs-to>
+		<remote-id type="github">igo95862/cfs-zen-tweaks</remote-id>
+	</upstream>
+</pkgmetadata>
