@@ -6,7 +6,7 @@
 
 Create a new configuration or add this to the main configuration (gentoo.conf).
 
-<a href="#adding-this-overlay"><img alt="" align="right" width="255px" src="https://repository-images.githubusercontent.com/384169861/e8405080-e0ba-11eb-9ff2-744e4ee2e2e2"/></a>
+<a href="#adding-this-overlay"><img alt="" align="right" width="280px" src="https://repository-images.githubusercontent.com/384169861/a8ea4961-3e9e-42e0-a5bc-ed50ad2aadb6"/></a>
 
 ```sh
 doas cat >> /etc/portage/repos.conf/overlay.conf << "CONF"
