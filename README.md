@@ -8,8 +8,6 @@
 
 ## <samp>ADDING THIS OVERLAY</samp>
 
-Create a new configuration or add this to the main configuration (gentoo.conf).
-
 <a href="#adding-this-overlay">
   <img alt="" align="right" width="280px" src="https://repository-images.githubusercontent.com/384169861/a8ea4961-3e9e-42e0-a5bc-ed50ad2aadb6"/>
 </a>
@@ -55,7 +53,9 @@ No systemd units, add wide glyphs and true color emoji support (credit to
 <details>
 <summary><b>Screenshot</b></summary>
 
-<img alt="" align="center" src="https://i.imgur.com/IYzXBC7.png"/>
+<p align="center">
+  <img alt="" src="https://i.imgur.com/IYzXBC7.png"/>
+</p>
 
 > https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
 
