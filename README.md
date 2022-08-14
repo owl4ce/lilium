@@ -63,6 +63,8 @@ No systemd units, add wide glyphs and true color emoji support (credit to
 
 ### [`sys-apps/cfs-zen-tweaks`](./sys-apps/cfs-zen-tweaks)
 
+### [`sys-fs/f2fs-tools`](./sys-fs/f2fs-tools) (live)
+
 ### *More will come, if needed.*
 
 </div>
