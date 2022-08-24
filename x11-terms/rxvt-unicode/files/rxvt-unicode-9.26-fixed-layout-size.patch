@@ -1,0 +1,31 @@
+--- a/src/main.C
++++ b/src/main.C
+@@ -655,7 +655,7 @@
+   unsigned int w, h;
+   unsigned int max_width, max_height;
+ 
+-  szHint.flags = PMinSize | PResizeInc | PBaseSize | PWinGravity;
++  szHint.flags = PMinSize | PBaseSize | PWinGravity;
+   szHint.win_gravity = NorthWestGravity;
+   /* szHint.min_aspect.x = szHint.min_aspect.y = 1; */
+ 
+@@ -874,9 +874,8 @@
+ #endif
+     }
+ 
+-  if (parent)
+     {
+-      resize_all_windows (0, 0, 0);
++      resize_all_windows (szHint.width, szHint.height, 1);
+       scr_remap_chars ();
+       scr_touch (true);
+     }
+@@ -1090,7 +1089,7 @@
+     {
+       szHint.flags &= ~(PBaseSize | PResizeInc);
+       XSetWMNormalHints (dpy, parent, &szHint);
+-      szHint.flags |= PBaseSize | PResizeInc;
++      szHint.flags |= PBaseSize;
+     }
+ 
+   if (!ignoreparent)
