@@ -63,7 +63,9 @@ No systemd units, add wide glyphs and true color emoji support (credit to
 
 ### [`sys-apps/cfs-zen-tweaks`](./sys-apps/cfs-zen-tweaks)
 
-### [`sys-fs/f2fs-tools`](./sys-fs/f2fs-tools) (live)
+### [~~`sys-fs/f2fs-tools`~~](./sys-fs/f2fs-tools) (live ebuild)
+
+[Merged to upstream](https://gitweb.gentoo.org/repo/gentoo.git/patch/?id=e0fee33fc6aa312e2ca62ace9c05cf2eafd64b97).
 
 ### *More will come, if needed.*
 
